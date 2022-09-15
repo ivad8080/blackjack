@@ -1,0 +1,128 @@
+:root {
+  --lightgreen100: #dcedc8;
+  --lightgreen500: #8bc34a;
+  --lightgreen900: #33691e;
+  --lightgreen900dark: #003d00;
+  --goldenrod600: #daa520;
+  --green500: #4caf50;
+
+  --primary-color: var(--lightgreen500);
+  --primary-light: var(--lightgreen100);
+  --primary-dark: var(--lightgreen900);
+  --primary-deepdark: var(--lightgreen900dark);
+  --secondary-color: var(--goldenrod600);
+  --tertiary-color: var(--green500);
+
+  --primary-font: 'Arial', sans-serif;
+  --secondary-font: serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 1px solid rgba(0, 0, 0, 30%);
+}
+
+body {
+  font-family: var(--primary-font);
+  font-size: 1rem;
+  color: var(--primary-light);
+  background-color: var(--primary-dark);
+  text-align: center;
+}
+
+.wrapper {
+  height: 100vh;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: grid;
+  max-width: 600px;
+  width: 100%;
+  grid-gap: 3rem;
+}
+
+.container>header>h1 {
+  font-size: 4rem;
+  color: var(--secondary-color);
+}
+
+.container>main {
+  display: grid;
+  grid-gap: 2rem;
+}
+
+.container>main>p {
+  font-size: 2rem;
+}
+
+.container>main>.buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* grid-template-columns: 1fr; */
+  grid-gap: 1.25rem;
+}
+
+@media (max-width: 600px) {
+  .container>main>.buttons {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+
+ .container>main>.buttons>button {
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary-deepdark);
+  border: 0;
+  border-radius: .4rem;
+  background-color: var(--secondary-color);
+  cursor: pointer;
+  transition: transform .05s ease-in-out, filter .05s ease-in-out;
+ }
+
+ .container>main>.buttons>button {
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary-deepdark);
+  border: 0;
+  border-radius: .4rem;
+  background-color: var(--secondary-color);
+  cursor: pointer;
+  transition: transform .02s ease-in-out, filter .02s ease-in-out;
+ }
+
+ .container>main>.buttons>button:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+ }
+
+ .container>main>.buttons>button:active {
+  transform: scale(0.95);
+  filter: brightness(.95);
+ }
+
+ .container>main>.buttons>button.disabled {
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: darkgrey;
+  border: 0;
+  border-radius: .4rem;
+  background-color: grey;
+  cursor: pointer;
+ }
+
+ .container>main>.buttons>button.disabled:hover {
+  transform: scale(1);
+  filter: brightness(1);
+  cursor: not-allowed;
+ } 
+
