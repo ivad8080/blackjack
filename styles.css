@@ -1,18 +1,11 @@
 :root {
-  --lightgreen100: #dcedc8;
-  --lightgreen500: #8bc34a;
-  --lightgreen900: #33691e;
-  --lightgreen900dark: #003d00;
-  --goldenrod600: #daa520;
-  --green500: #4caf50;
 
-  --primary-color: var(--lightgreen500);
-  --primary-light: var(--lightgreen100);
-  --primary-dark: var(--lightgreen900);
-  --primary-deepdark: var(--lightgreen900dark);
-  --secondary-color: var(--goldenrod600);
-  --tertiary-color: var(--green500);
-
+  --primary-light: #f1f8e9;
+  --primary-lightmedium: #c5e1a5;
+  --primary-medium: #9ccc65; /* green */
+  --primary-dark: #7cb342;
+  --primary-deepdark: #558b2f;
+ 
   --primary-font: 'Arial', sans-serif;
   --secondary-font: serif;
 }
@@ -21,14 +14,19 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  outline: 1px solid rgba(0, 0, 0, 30%);
+  /* outline: 1px solid rgba(0, 0, 0, 30%); */
 }
+
+a {
+  color: var(--primary-lightmedium);
+}
+
 
 body {
   font-family: var(--primary-font);
   font-size: 1rem;
   color: var(--primary-light);
-  background-color: var(--primary-dark);
+  background-color: var(--primary-deepdark);
   text-align: center;
 }
 
@@ -49,7 +47,7 @@ body {
 
 .container>header>h1 {
   font-size: 4rem;
-  color: var(--secondary-color);
+  color: var(--primary-light);
 }
 
 .container>main {
@@ -79,29 +77,17 @@ body {
   padding: 1rem;
   font-size: 1.5rem;
   font-weight: bold;
-  color: var(--primary-deepdark);
+  color: var(--primary-light);
   border: 0;
   border-radius: .4rem;
-  background-color: var(--secondary-color);
+  background-color: var(--primary-dark);
   cursor: pointer;
-  transition: transform .05s ease-in-out, filter .05s ease-in-out;
- }
-
- .container>main>.buttons>button {
-  padding: 1rem;
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: var(--primary-deepdark);
-  border: 0;
-  border-radius: .4rem;
-  background-color: var(--secondary-color);
-  cursor: pointer;
-  transition: transform .02s ease-in-out, filter .02s ease-in-out;
+  transition: transform .1s ease-in-out, filter .1s ease-in-out;
  }
 
  .container>main>.buttons>button:hover {
-  transform: scale(1.05);
-  filter: brightness(1.1);
+  transform: scale(1.02);
+  filter: brightness(1.05);
  }
 
  .container>main>.buttons>button:active {
@@ -124,5 +110,10 @@ body {
   transform: scale(1);
   filter: brightness(1);
   cursor: not-allowed;
- } 
+ }
 
+ .footer>p {
+  padding: .75rem;
+  font-size: .8rem;
+  text-align: right;
+}
